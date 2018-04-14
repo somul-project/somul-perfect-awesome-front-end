@@ -14,6 +14,26 @@ function validateNotEmpty(text) {
     return (trimed.length == 0? false: true);
 }
 
+function validateDropDownChecked(dropDownList) {
+
+    var i;
+    for (i = 0; i < dropDownList.length; i++) {
+        var id = dropDownList[i];
+        var dropDownClicked = document.getElementById(id + "_isClicked");
+        if (dropDownClicked.value !== "true") {
+            window.location.hash = '';
+            window.location.hash = '#' + id;
+            window.scrollBy(0, -30);
+
+            var child = document.querySelector('#' + id + ' .dropbtn');
+            child.style.color = "red";
+            return false;
+        }
+    }
+
+    return true;
+}
+
 /*
 function validateEmailTest() {
     var testcase = 

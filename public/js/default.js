@@ -3,7 +3,7 @@ toggle between hiding and showing the dropdown content */
 function clickDropBtn(id, dropList) {
     
     var dropbtn = document.getElementById(dropList).classList;
-    
+
     dropbtn.toggle("show");
     
     var child_image = document.querySelector('#' + id + ' .dropbtn-image');
@@ -39,6 +39,10 @@ function closeDropBtnAll() {
 function setDropBtnName(id, name) {
     var child = document.querySelector('#' + id + ' .dropbtn');
     child.innerHTML = name;
+    child.style.color = "black";
+
+    var dropDownClicked = document.getElementById(id + "_isClicked");
+    dropDownClicked.value = "true";
 }
 
 var dropBtnIgnore = document.querySelectorAll('.dropbtn');
