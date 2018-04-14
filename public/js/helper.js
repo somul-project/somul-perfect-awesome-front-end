@@ -29,7 +29,6 @@ function createPlaneText(text) {
 
 function createRadio(list) {
     var rRadio = "";
-    console.log(list);
     var i = 0;
     list.forEach(element => {
         rRadio += 
