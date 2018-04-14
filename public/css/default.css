@@ -4,9 +4,9 @@ html, body {
     background: rgb(243, 239, 180);
 }
 
-.paper {
+#paper {
     background: white;
-    margin: auto;
+    margin: 12px auto;
     padding: 40px;
     max-width: 400;
     
@@ -31,8 +31,8 @@ title
 */
 h1 {
     margin: 0;
-    font-size: 30px;
-    font-weight: 500;
+    font-size: 40px;
+    font-weight: 400;
 }
 
 /*
@@ -40,8 +40,18 @@ h1 {
 */
 h2 {
     margin: 0;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+hr {
+    color : gray;
 }
 
 label {
@@ -80,7 +90,7 @@ input[type="text"], input[type="password"], input[type="email"] {
     border-bottom: 1px solid gray !important;
     padding: 3px 3px;
     width: 100%;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 input[type="text"]:focus {

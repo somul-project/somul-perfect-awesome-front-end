@@ -1,10 +1,14 @@
 
-require("./helper.js");
-
-createPaper();
+createWrapper([
+    createTitleText("소프트웨어에<br>물들다<br>참여신청")
+]);
 
 createWrapper([
-    createTitleText("title")
+    createHr()
+]);
+
+createWrapper([
+    createSubTitleText("개인정보 입력")
 ]);
 
 createWrapper([

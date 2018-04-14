@@ -1,9 +1,45 @@
 <html>
-<head>
-    <link rel="stylesheet" type="text/css" href="./public/css/default.css">
-</head>
-<body>
-
-</body>
-<script src="./public/js/application.js"></script>
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="./public/css/default.css">
+   </head>
+   <body>
+      <div id="paper">
+         <div class="wrapper">
+            <h1>소프트웨어에<br>물들다<br>참여신청</h1>
+         </div>
+         <div class="wrapper">
+            <hr>
+         </div>
+         <div class="wrapper">
+            <h2>개인정보 입력</h2>
+         </div>
+         <div class="wrapper"><label class="font-gray big" for="contactChoice0"><input type="radio" id="contactChoice1" name="contact" value="강연자">강연자</label><label class="font-gray big" for="contactChoice1"><input type="radio" id="contactChoice2" name="contact" value="봉사자">봉사자</label></div>
+         <div class="wrapper">
+            <h3>이름</h3>
+            <br><input type="text" id="text" name="utext" placeholder="이름을 입력해 주세요."><br><br>
+         </div>
+         <div class="wrapper">
+            <h3>이메일</h3>
+            <br><input type="email" id="text" name="utext" placeholder="이메일을 입력해 주세요."><br><br><input type="button" class="background-blue" value="인증번호 보내기" onclick="undefined">
+         </div>
+         <div class="wrapper">
+            <h3>인증번호</h3>
+            <br><input type="text" id="text" name="utext" placeholder="인증번호를 입력해주세요"><br><br>
+         </div>
+         <div class="wrapper">
+            <h3>휴대폰 번호</h3>
+            <br><input type="text" id="text" name="utext" placeholder="휴대폰 번호를 입력해 주세요."><br><br>
+         </div>
+         <div class="wrapper">
+            <h3>비밀번호 설정</h3>
+            <br><input type="text" id="text" name="utext" placeholder="휴대폰 번호를 입력해 주세요."><br><br><br><input type="text" id="text" name="utext" placeholder="재입력 해주세요"><br><br>
+         </div>
+         <div class="wrapper">
+            <h3>개인정보 수집</h3>
+            <br><label class="small"><input type="checkbox" id="check">동의</label>
+         </div>
+         <div class="wrapper"><input type="button" class="background-yellow" value="완료" onclick="undefined"></div>
+      </div>
+   </body>
 </html>
