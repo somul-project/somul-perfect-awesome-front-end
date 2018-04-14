@@ -60,6 +60,22 @@ function createInput(type, planeHolder) {
     return rInput;
 }
 
-function createDropDown() {
-    
+var index = 0;
+function createDropDown(defaultText, dropList) {
+    index++;
+    var rDropDown = "";
+    rDropDown += '<div class="dropdown">';
+    rDropDown +=    '<div id="d' + index + '" class="drop-btn-wrapper close" onclick="clickDropBtn(\'d' + index + '\', \'droplist' + index + '\')">';
+    rDropDown +=        '<div class="dropbtn">Dropdown</div>';
+    rDropDown +=        '<div class="dropbtn-image">close</div>';
+    rDropDown +=    '</div>'
+    rDropDown +=    '<div id="droplist' + index + '" class="dropdown-content">';
+
+    dropList.forEach(element => {
+        rDropDown +=    '<a onclick="setDropBtnName(\'d' + index + '\', \'' + element + '\')">' + element + '</a>';
+    });
+    rDropDown +=     '</div>'
+    rDropDown += '</div>'
+
+    return rDropDown;
 }
