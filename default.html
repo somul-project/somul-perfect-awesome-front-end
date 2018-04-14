@@ -1,0 +1,75 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="./public/css/default.css">
+</head>
+<body>
+    <div class="paper">
+        <div class="wrapper">
+            <h1>소프트웨어에 물들다 신청서</h1>
+        </div>
+        <hr>
+        <div class="wrapper">
+            <h2>정보</h2>
+        </div>
+
+        <div class="wrapper">
+            <input type="button" class="background-blue" value="버튼">
+            <input type="button" class="background-yellow" value="버튼">
+        </div>
+
+        <div class="wrapper">
+            <label class="font-gray big" for="contactChoice1">
+                <input type="radio" id="contactChoice1" name="contact" value="email">Email
+            </label>
+
+            <label class="font-gray big" for="contactChoice2">
+                <input type="radio" id="contactChoice2" name="contact" value="email">Email
+            </label>
+
+            <label class="font-gray big" for="contactChoice3">
+                <input type="radio" id="contactChoice3" name="contact" value="email">Email
+            </label>
+        </div>
+
+        <div class="wrapper">
+            <input type="text" id="text" name="utext" placeholder="text"><br/>
+            <input type="password" id="password" name="upassword" placeholder="password"><br/>
+            <input type="email" id="email" name="uemail" placeholder="email">
+        </div>
+        <div class="wrapper">
+            <form>
+                <label class="small"><input type="checkbox" id="check">check</label>
+            </form>
+        </div>
+        <div class="wrapper">
+            <div class="dropdown">
+                <div id="d1" class="drop-btn-wrapper close" onclick="clickDropBtn('d1', 'droplist1')" >
+                    <div class="dropbtn">Dropdown</div>
+                    <div class="dropbtn-image">close</div>
+                </div>
+                <div id="droplist1" class="dropdown-content">
+                    <a onclick="setDropBtnName('d1', 'Link 1')">Link 1</a>
+                    <a onclick="setDropBtnName('d1', 'Link 2')">Link 2</a>
+                    <a onclick="setDropBtnName('d1', 'Link 3')">Link 3</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="dropdown">
+                <div id="d2" class="drop-btn-wrapper close" onclick="clickDropBtn('d2', 'droplist2')" >
+                    <div class="dropbtn">Dropdown</div>
+                    <div class="dropbtn-image">close</div>
+                </div>
+                <div id="droplist2" class="dropdown-content">
+                    <a onclick="setDropBtnName('d2', 'Link 1')">Link 1</a>
+                    <a onclick="setDropBtnName('d2', 'Link 2')">Link 2</a>
+                    <a onclick="setDropBtnName('d2', 'Link 3')">Link 3</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./public/js/default.js"></script>
+</html>
