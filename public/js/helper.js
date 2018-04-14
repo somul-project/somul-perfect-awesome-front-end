@@ -63,3 +63,9 @@ function createInput(type, planeHolder) {
 function createDropDown() {
     
 }
+
+function createPtag(text) {
+    var rPtag = "";
+    rPtag = "<p>" + text + "</p>";
+    return rPtag;
+}

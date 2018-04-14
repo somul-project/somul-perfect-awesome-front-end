@@ -6,12 +6,12 @@ html, body {
 
 #paper {
     background: white;
-    margin: 12px auto;
+    margin: 48px auto;
     padding: 40px;
-    max-width: 400;
-    
-    -webkit-box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24);
-    box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24);
+    max-width: 600px;
+
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+    box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
 }
 
 .wrapper {
@@ -51,7 +51,7 @@ h3 {
 }
 
 hr {
-    color : gray;
+    color: gray;
 }
 
 label {
@@ -93,7 +93,7 @@ input[type="text"], input[type="password"], input[type="email"] {
     font-size: 16px;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
     border-bottom: 1px solid black !important;
 }
 
@@ -163,7 +163,7 @@ input[type="text"]:focus {
     display: none;
     position: absolute;
     background-color: #fff;
-    width:100%;
+    width: 100%;
     z-index: 1;
 }
 
@@ -178,8 +178,10 @@ input[type="text"]:focus {
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
     background-color: #0652DD;
-    color:#fff;
+    color: #fff;
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+.show {
+    display: block;
+}
