@@ -84,3 +84,22 @@ function createPtag(text) {
     rPtag = "<p>" + text + "</p>";
     return rPtag;
 }
+
+function createHyperText(type, href, text) {
+    var rAtag = '<a href=' + href + '>';
+    switch (type) {
+        case "h1":
+            rAtag += createTitleText(text);
+            break;
+        case "h2":
+            rAtag += createSubTitleText(text);
+            break;
+        case "h3":
+            rAtag += createPlaneText(text);
+            break;
+        case "p":
+            rAtag += createPtag(text);
+            break;
+    }
+    return rAtag + '</a>'
+}
