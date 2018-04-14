@@ -65,6 +65,7 @@ function createDropDown(defaultText, dropList) {
     var rDropDown = "";
     rDropDown += '<div class="dropdown">';
     rDropDown +=    '<div id="d' + index + '" class="drop-btn-wrapper close" onclick="clickDropBtn(\'d' + index + '\', \'droplist' + index + '\')">';
+    rDropDown +=        '<input id="d' + index + '_isClicked" type="hidden" name="isClicked" value="false">';
     rDropDown +=        '<div class="dropbtn">Dropdown</div>';
     rDropDown +=        '<div class="dropbtn-image">close</div>';
     rDropDown +=    '</div>'

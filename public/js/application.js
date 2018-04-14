@@ -38,7 +38,7 @@ createWrapper([
 
 createWrapper([
     createPlaneText("비밀번호 설정"),
-    createInput("text", "휴대폰 번호를 입력해 주세요."),
+    createInput("text", "비밀번호를 입력해 주세요."),
     createInput("text", "재입력 해주세요")
 ]);
 
