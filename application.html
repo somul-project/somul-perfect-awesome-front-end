@@ -1,45 +1,92 @@
-<html>
-   <head>
-      <meta charset="utf-8">
-      <link rel="stylesheet" type="text/css" href="./public/css/default.css">
-   </head>
-   <body>
-      <div id="paper">
-         <div class="wrapper">
-            <h1>소프트웨어에<br>물들다<br>참여신청</h1>
-         </div>
-         <div class="wrapper">
-            <hr>
-         </div>
-         <div class="wrapper">
-            <h2>개인정보 입력</h2>
-         </div>
-         <div class="wrapper"><label class="font-gray big" for="contactChoice0"><input type="radio" id="contactChoice1" name="contact" value="강연자">강연자</label><label class="font-gray big" for="contactChoice1"><input type="radio" id="contactChoice2" name="contact" value="봉사자">봉사자</label></div>
-         <div class="wrapper">
-            <h3>이름</h3>
-            <br><input type="text" id="text" name="utext" placeholder="이름을 입력해 주세요."><br><br>
-         </div>
-         <div class="wrapper">
-            <h3>이메일</h3>
-            <br><input type="email" id="text" name="utext" placeholder="이메일을 입력해 주세요."><br><br><input type="button" class="background-blue" value="인증번호 보내기" onclick="undefined">
-         </div>
-         <div class="wrapper">
-            <h3>인증번호</h3>
-            <br><input type="text" id="text" name="utext" placeholder="인증번호를 입력해주세요"><br><br>
-         </div>
-         <div class="wrapper">
-            <h3>휴대폰 번호</h3>
-            <br><input type="text" id="text" name="utext" placeholder="휴대폰 번호를 입력해 주세요."><br><br>
-         </div>
-         <div class="wrapper">
-            <h3>비밀번호 설정</h3>
-            <br><input type="text" id="text" name="utext" placeholder="휴대폰 번호를 입력해 주세요."><br><br><br><input type="text" id="text" name="utext" placeholder="재입력 해주세요"><br><br>
-         </div>
-         <div class="wrapper">
-            <h3>개인정보 수집</h3>
-            <br><label class="small"><input type="checkbox" id="check">동의</label>
-         </div>
-         <div class="wrapper"><input type="button" class="background-yellow" value="완료" onclick="undefined"></div>
-      </div>
-   </body>
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/default.css">
+
+    <title>Hello, world!</title>
+</head>
+<body>
+
+<div class="container paper">
+    <div class="jumbotron shadow">
+        <div class="container">
+            <h1>소프트웨어에<br>물들다<br>참가신청서</h1>
+        </div>
+        <hr>
+
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">이름</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                       placeholder="이메일을 입력해주세요.">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">이메일</label>
+                <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="휴대폰 번호를 입력해주세요.">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">휴대폰 번호</label>
+                <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="휴대폰 번호를 입력해주세요.">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">비밀번호</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="비밀번호를 입력해주세요.">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">비밀번호를 재입력</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="비밀번호를 재입력해주세요.">
+            </div>
+            <div class="form-group">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalLong">
+                    개인정보 이용약관
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                     aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">개인정보 이용약관</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                동의~
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"></button>
+                                <button type="button" class="btn btn-primary">어보감~</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <small id="emailHelp" class="form-text text-muted">위 약관을 자세히 읽었으며, 개인정보이용에 동의합니다.</small>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">완료</button>
+        </form>
+    </div>
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="./public/js/bootstrap.min.js"></script>
+</body>
 </html>
