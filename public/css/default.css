@@ -23,6 +23,10 @@ h1 {
     background: #fff;
 }
 
+p.text-muted > b {
+    color: #000000;
+}
+
 @media screen and (max-width: 600px) {
     .card-columns {
         -webkit-column-count: 1;
