@@ -1,29 +1,40 @@
 
-createWrapper([
-    createTitleText("신청 현황")
-]);
+$(document).ready(function () {
+    $(".paper").show();
+    $(".spinner-preloader").hide();
+});
 
-createWrapper([
-    createHr()
-]);
 
-createWrapper([
-    createPlaneText("이메일"),
-    createInput("email", "email","이메일을 입력해 주세요.")
-]);
-
-createWrapper([
-    createPlaneText("비밀번호"),
-    createInput("text", "password", "비밀번호를 입력해 주세요."),
-]);
-
-createWrapper([
-    createButton("blue", "확인", "submit()"),
-    createHyperText("p", "#", "비밀번호를 잊으셨나요?"),
-]);
-
-function submit() {
+$("#submit").click(function (event) {
+    event.preventDefault();
     if(!validateNotEmpty()) return false;
+    if(!validateEmail()) return false;
     
-    // send
-}
+        
+    var dict = {
+        'email': $('#email').val(),
+        'password': $('#password').val(),
+    };
+    
+    $.ajax({
+        type: "POST",
+        url: "http://13.124.202.225/api/v1/signin",
+        data: JSON.stringify(dict),
+        error: function(err) {
+            console.log(err);
+        },
+        beforeSend: function() {
+            $(".paper").hide();
+            $(".spinner-preloader").show();
+        },
+        success: function(data) {
+            
+        },
+        complete : function() {
+            $(".spinner-preloader").fadeOut("slow", function () {
+                $(".paper").fadeIn("slow");
+            });   
+        },
+        dataType: "json"
+    });
+});

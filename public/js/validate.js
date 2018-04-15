@@ -17,7 +17,7 @@ function validatePhone() {
     if (!re.test(input.value)) {
         alert("핸드폰 번호 형식에 맞지 않습니다. 다시 입력해주세요.")
         window.scrollTo(0, window.scrollY + input.getBoundingClientRect().top - 60);
-        $(input[i]).effect("highlight", {color: '#F48FB1'}, 800);
+        $(input).effect("highlight", {color: '#F48FB1'}, 800);
         return false;
     }
     return true;
@@ -31,7 +31,6 @@ function validateNotEmpty() {
         var trimed = input[i].value.trim();
         if (trimed.length == 0) {
             window.scrollTo(0, window.scrollY + input[i].getBoundingClientRect().top - 60);
-            
             $(input[i]).effect("highlight", {color: '#F48FB1'}, 800);
             return false;
         }
@@ -93,6 +92,6 @@ function validateCheckBox() {
     if (document.getElementById("check").checked) {
         return true;
     } else {
-        $('#check').effect("bounce");
+        $('#check-form').effect("bounce");
     }
 }

@@ -1,45 +1,118 @@
-<html>
-   <head>
-      <meta charset="utf-8">
-      <link rel="stylesheet" type="text/css" href="./public/css/default.css">
-   </head>
-   <body>
-      <div id="paper">
-         <div class="wrapper">
-            <h1>소프트웨어에<br>물들다<br>참여신청</h1>
-         </div>
-         <div class="wrapper">
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/default.css">
+    
+    <title>소프트웨어에 물들다</title>
+</head>
+<body>
+    <div class="preloader-wrapper">
+        <div class="spinner-preloader">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <div class="container paper">
+        <div class="jumbotron shadow">
+            <div class="container">
+                <h1>소프트웨어에<br>물들다<br>참가신청서</h1>
+            </div>
             <hr>
-         </div>
-         <div class="wrapper">
-            <h2>개인정보 입력</h2>
-         </div>
-         <div class="wrapper"><label class="font-gray big" for="contactChoice0"><input type="radio" id="contactChoice1" name="contact" value="강연자">강연자</label><label class="font-gray big" for="contactChoice1"><input type="radio" id="contactChoice2" name="contact" value="봉사자">봉사자</label></div>
-         <div class="wrapper">
-            <h3>이름</h3>
-            <br><input type="text" id="text" name="utext" placeholder="이름을 입력해 주세요."><br><br>
-         </div>
-         <div class="wrapper">
-            <h3>이메일</h3>
-            <br><input type="email" id="text" name="utext" placeholder="이메일을 입력해 주세요."><br><br><input type="button" class="background-blue" value="인증번호 보내기" onclick="undefined">
-         </div>
-         <div class="wrapper">
-            <h3>인증번호</h3>
-            <br><input type="text" id="text" name="utext" placeholder="인증번호를 입력해주세요"><br><br>
-         </div>
-         <div class="wrapper">
-            <h3>휴대폰 번호</h3>
-            <br><input type="text" id="text" name="utext" placeholder="휴대폰 번호를 입력해 주세요."><br><br>
-         </div>
-         <div class="wrapper">
-            <h3>비밀번호 설정</h3>
-            <br><input type="text" id="text" name="utext" placeholder="휴대폰 번호를 입력해 주세요."><br><br><br><input type="text" id="text" name="utext" placeholder="재입력 해주세요"><br><br>
-         </div>
-         <div class="wrapper">
-            <h3>개인정보 수집</h3>
-            <br><label class="small"><input type="checkbox" id="check">동의</label>
-         </div>
-         <div class="wrapper"><input type="button" class="background-yellow" value="완료" onclick="undefined"></div>
-      </div>
-   </body>
+            
+            <form>
+                <div class="form-group">
+                    <label for="username">이름</label>
+                    <input type="text" class="form-control input" id="name" aria-describedby="emailHelp"
+                    placeholder="이름을 입력해주세요.">
+                </div>
+                <div class="form-group">
+                    <label for="useremail">이메일</label>
+                    <input type="tel" class="form-control input" id="email" placeholder="이메일을 입력해주세요.">
+                </div>
+                <div class="form-group">
+                    <label for="userphone">휴대폰 번호</label>
+                    <input type="tel" class="form-control input" id="phone" placeholder="휴대폰 번호를 입력해주세요.">
+                </div>
+                <div class="form-group">
+                    <label for="userpassword">비밀번호</label>
+                    <input type="password" class="form-control input" id="password" placeholder="비밀번호를 입력해주세요.">
+                </div>
+                <div class="form-group">
+                    <label for="userpasswordconfirm">비밀번호를 재입력</label>
+                    <input type="password" class="form-control input" id="check_password" placeholder="비밀번호를 재입력해주세요.">
+                </div>
+                <div class="form-group">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalLong">
+                        개인정보 이용약관
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">개인정보 이용약관</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                동의~
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"></button>
+                                <button type="button" class="btn btn-primary">어보감~</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="check-form" class="form-group">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="check">
+                    <label class="custom-control-label" for="check">위 약관을 자세히 읽었으며, 개인정보이용에 동의합니다.</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="exampleInputPassword1">소프트웨어에 물들다에 참가하신 경험이 있나요?</label>
+                <br>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label id="option1" class="btn btn-success">
+                        <input type="radio" name="options" autocomplete="off"> 네
+                    </label>
+                    <label id="option2" class="btn btn-success active">
+                        <input type="radio" name="options" autocomplete="off" checked> 아니요
+                    </label>
+                </div>
+            </div>
+            
+            <a type="button" onclick="submit()"><button type="button" class="btn btn-primary" >완료</button></a>
+        </form>
+    </div>
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="./public/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<script src="./public/js/validate.js"></script>
+<script src="./public/js/default.js"></script>
+<script src="./public/js/application.js"></script>
+
+</body>
 </html>
