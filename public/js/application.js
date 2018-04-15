@@ -1,4 +1,4 @@
-
+/* 
 createWrapper([
     createTitleText("소프트웨어에<br>물들다<br>참여신청")
 ]);
@@ -60,12 +60,25 @@ function sendConfirmMail() {
     // 살려줘요 TODO AM 02:46
     
 }
+*/
 
 function submit() {
-    if (!validateRadio()) return false;
+    
     if (!validateNotEmpty()) return false;
+    if (!validateEmail()) return false;
     if (!validatePhone()) return false;
     if (!validatePasswordCheck()) return false;
     if (!validateCheckBox()) return false;
     // send
+
+    var dict = {
+        'name': $('#name').val(),
+        'email': $('#email').val(),
+        'phone': $('#phone').val(),
+        'password': $('#password').val(),
+        'has_experienced_somul': $('#option1').hasClass('active'),
+    };
+    
+    console.log($('#option1'));
+    console.log(dict);
 }
