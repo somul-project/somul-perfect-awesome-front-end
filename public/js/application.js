@@ -69,13 +69,13 @@ $(document).ready(function () {
 
 function submit() {
     
-    
+    /*
     if (!validateNotEmpty()) return false;
     if (!validateEmail()) return false;
     if (!validatePhone()) return false;
     if (!validatePasswordCheck()) return false;
     if (!validateCheckBox()) return false;
-    
+    */
     // send
     
     var dict = {

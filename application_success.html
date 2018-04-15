@@ -1,16 +1,43 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="./public/css/default.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/default.css">
+
+    <title>Hello, world!</title>
 </head>
 <body>
-<div id="paper">
-    <div class="wrapper"><h1>신청이<br>완료되었습니다.</h1></div>
-    <div class="wrapper">
+
+<div class="container paper">
+    <div class="jumbotron shadow">
+        <div class="container">
+            <h1>신청이<br>완료되었습니다.</h1>
+        </div>
         <hr>
+        <div class="container">
+            <p>24시간 안에 이메일 인증을 하고,<br>추가 정보를 입력해주세요.</p>
+            <a href="http://a.com"><button type="submit" class="btn btn-warning">추가정보 입력하기</button></a>
+        </div>
     </div>
-    <div class="wrapper"><p>24시간 안에 이메일 인증을 하고,<br>추가 정보를 입력해주세요.</p></div>
-    <div class="wrapper"><input type="button" class="background-yellow" value="추가정보 입력하기" onclick="alert('추가정보')"></div>
+
 </div>
+
+<!-- Optional JavaScript -—>
+<!—- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="./public/js/bootstrap.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<script src="./public/js/validate.js"></script>
+<script src="./public/js/application_success.js"></script>
+
 </body>
 </html>
