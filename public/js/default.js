@@ -39,6 +39,10 @@ function closeDropBtnAll() {
 function setDropBtnName(id, name) {
     var child = document.querySelector('#' + id + ' .dropbtn');
     child.innerHTML = name;
+    child.style.color = "black";
+    
+    var dropDownClicked = document.getElementById(id + "_isClicked");
+    dropDownClicked.value = "true";
 }
 
 var dropBtnIgnore = document.querySelectorAll('.dropbtn');

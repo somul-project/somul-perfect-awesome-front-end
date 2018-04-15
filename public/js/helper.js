@@ -28,12 +28,12 @@ function createPlaneText(text) {
 }
 
 function createRadio(list) {
-    var rRadio = "";
+    var rRadio = '<div id="rule_radio"></div>';
     var i = 0;
     list.forEach(element => {
         rRadio += 
-        '<label class="font-gray big" for="contactChoice' + (i++) + '">'+
-            '<input type="radio" id="contactChoice' + (i) + '" name="contact" value="' + element +'">' + element + ''+
+        '<label class="font-gray big"' + (i++) + '">'+
+            '<input type="radio"' + (i) + '" name="rule_radio" value="' + element +'">' + element + ''+
         '</label>'
     });
     return rRadio;
@@ -53,9 +53,9 @@ function createButton(type, text, f) {
 }
 
 // text, password, email
-function createInput(type, planeHolder) {
+function createInput(type, id, planeHolder) {
     var rInput = "";
-    rInput = '<br><input type="' + type + '" id="text" name="utext" placeholder="' + planeHolder + '"><br/><br>';
+    rInput = '<br><input id ="' + id + '"class="input" type="' + type + '" id="text" name="utext" placeholder="' + planeHolder + '"><br/><br>';
     return rInput;
 }
 
@@ -65,6 +65,7 @@ function createDropDown(defaultText, dropList) {
     var rDropDown = "";
     rDropDown += '<div class="dropdown">';
     rDropDown +=    '<div id="d' + index + '" class="drop-btn-wrapper close" onclick="clickDropBtn(\'d' + index + '\', \'droplist' + index + '\')">';
+    rDropDown +=        '<input id="d' + index + '_isClicked" type="hidden" name="isClicked" value="false">';
     rDropDown +=        '<div class="dropbtn">Dropdown</div>';
     rDropDown +=        '<div class="dropbtn-image">close</div>';
     rDropDown +=    '</div>'

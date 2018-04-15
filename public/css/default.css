@@ -67,6 +67,10 @@ label.small {
     font-size: 9px;
 }
 
+input[type="checkbox"] {
+    float: left;
+}
+
 input[type="button"] {
     border-radius: 2px;
     padding: 12px;
