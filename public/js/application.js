@@ -23,7 +23,7 @@ createWrapper([
 createWrapper([
     createPlaneText("이메일"),
     createInput("email", "email", "이메일을 입력해 주세요."),
-    createButton("blue", "인증번호 보내기", "sendConfirmMail('email')")
+    createButton("blue", "인증번호 보내기", "sendConfirmMail()")
 ]);
 
 createWrapper([
@@ -53,23 +53,19 @@ createWrapper([
 
 // Functions
 
-function sendConfirmMail(id) {
+function sendConfirmMail() {
     // validate
-    var email = document.getElementById(id);
-    if(!validateEmail(email.value)) {
-        alert("잘못 된 이메일 형식입니다.");
-        return false;
-    }
+    if (!validateEmail()) return false;
     // send
     // 살려줘요 TODO AM 02:46
+    
 }
 
 function submit() {
-    /*
-    if(!validateRadio()) return false;
-    if(!validateNotEmpty()) return false;
-    if(!validatePhone()) return false;
-    if(!validatePasswordCheck()) return false;*/
-    if(!validateCheckBox()) return false;
+    if (!validateRadio()) return false;
+    if (!validateNotEmpty()) return false;
+    if (!validatePhone()) return false;
+    if (!validatePasswordCheck()) return false;
+    if (!validateCheckBox()) return false;
     // send
 }

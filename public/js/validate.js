@@ -1,8 +1,14 @@
 // Validate
 
-function validateEmail(email) {
+function validateEmail() {
+
+    var email = document.getElementById("email");
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+    if (!re.test(String(email.value.toLocaleLowerCase()))) {
+        alert("잘못 된 이메일 형식입니다.");
+        return false;
+    }
+    return true;
 }
 
 function validatePhone() {
