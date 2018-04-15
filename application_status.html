@@ -1,30 +1,54 @@
-<html>
-   <head>
-      <meta charset="utf-8">
-      <link rel="stylesheet" type="text/css" href="./public/css/default.css">
-   </head>
-   <body>
-      <div id="paper">
-         <div class="wrapper">
-            <h1>신청 현황</h1>
-         </div>
-         <div class="wrapper">
+<html lang="en"><head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./public/css/default.css">
+    
+        <title>소프트웨어에 물들다</title>
+    </head>
+    <body>
+    
+    <div class="container paper">
+        <div class="jumbotron shadow">
+            <div class="container">
+                <h1>소프트웨어에<br>물들다<br>로그인</h1>
+            </div>
             <hr>
-         </div>
-         <div class="wrapper">
-            <h3>이메일</h3>
-            <br><input type="email" id="text" name="utext" placeholder="이메일을 입력해 주세요."><br><br>
-         </div>
-         <div class="wrapper">
-            <h3>비밀번호</h3>
-            <br><input type="text" id="text" name="utext" placeholder="비밀번호를 입력해 주세요."><br><br>
-         </div>
-         <div class="wrapper">
-            <input type="button" class="background-blue" value="확인" onclick="undefined">
-            <a href="#">
-               <p>비밀번호를 잊으셨나요?</p>
-            </a>
-         </div>
-      </div>
-   </body>
+            <form>
+                <div class="form-group">
+                    <label for="emailw">이메일</label>
+                    <input type="email" class="form-control input" id="email" placeholder="이메일을 입력해주세요.">
+                </div>
+                <div class="form-group">
+                    <label for="passwordw">비밀번호</label>
+                    <input type="password" class="form-control input" id="password" placeholder="비밀번호를 입력해주세요.">
+                </div>
+                <div class="form-group">
+                    <a type="button" id="submit"><button type="submit" class="btn btn-primary" >완료</button></a>
+                    <br>
+                    <br>
+                    <a href="">비밀번호를 잊으셨나요?</a>
+                </div>
+    
+            </form>
+        </div>
+    
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="./public/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <script src="./public/js/validate.js"></script>
+    <script src="./public/js/application_status.js"></script>
+
+    </body>
 </html>
