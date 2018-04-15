@@ -62,15 +62,22 @@ function sendConfirmMail() {
 }
 */
 
+$(document).ready(function () {
+    $(".paper").show();
+    $(".spinner-preloader").hide();
+});
+
 function submit() {
+    
     
     if (!validateNotEmpty()) return false;
     if (!validateEmail()) return false;
     if (!validatePhone()) return false;
     if (!validatePasswordCheck()) return false;
     if (!validateCheckBox()) return false;
+    
     // send
-
+    
     var dict = {
         'name': $('#name').val(),
         'email': $('#email').val(),
@@ -79,6 +86,25 @@ function submit() {
         'has_experienced_somul': $('#option1').hasClass('active'),
     };
     
-    console.log($('#option1'));
-    console.log(dict);
+    $.ajax({
+        type: "POST",
+        url: "http://13.124.202.225/api/v1/user",
+        data: JSON.stringify(dict),
+        error: function(err) {
+            console.log(err);
+        },
+        beforeSend: function() {
+            $(".paper").hide();
+            $(".spinner-preloader").show();
+        },
+        success: function(data) {
+            
+        },
+        complete : function() {
+            $(".spinner-preloader").fadeOut("slow", function () {
+                $(".paper").fadeIn("slow");
+            });   
+        },
+        dataType: "json"
+    });
 }
