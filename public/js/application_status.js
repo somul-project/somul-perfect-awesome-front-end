@@ -18,7 +18,8 @@ $("#submit").click(function (event) {
     
     $.ajax({
         type: "POST",
-        url: "http://13.124.202.225/api/v1/signin",
+        url: "/api/v1/signin",
+        contentType: 'application/json; charset=UTF-8',
         data: JSON.stringify(dict),
         error: function(err) {
             console.log(err);
